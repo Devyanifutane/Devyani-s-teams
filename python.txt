@@ -1,0 +1,10 @@
+def calculate_target_heart_rate(age):
+    maximum_heart_rate = 220 - age
+    lower_end = 0.5 * maximum_heart_rate
+    upper_end = 0.85 * maximum_heart_rate
+    target_heart_rate = (lower_end + upper_end) / 2
+    return target_heart_rate
+
+age = int(input("Enter your age: "))
+target_heart_rate = calculate_target_heart_rate(age)
+print("Your target heart rate is between", int(target_heart_rate), "and", int(0.85 * (220 - age)), "beats per minute.")
